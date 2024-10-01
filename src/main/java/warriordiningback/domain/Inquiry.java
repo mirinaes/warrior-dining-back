@@ -15,9 +15,11 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.Getter;
+import warriordiningback.domain.user.User;
 
 @Getter
 @Entity
@@ -49,5 +51,8 @@ public class Inquiry {
 	
 	@ManyToOne
 	private Code code;
+	
+	@ManyToOne 
+	private User user;
 
 }
